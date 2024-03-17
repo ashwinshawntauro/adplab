@@ -10,11 +10,16 @@ def collatz(num):
     while value!=1:
         print(value)
         num=value
-        return collatz(num)
+        collatz(num)
 
-print('Enter a starting number(greater than 0) or quit:')
-num=input('>')
-if (num==0 or not num.isdecimal()):
-    print('Enter a positive integer greater than 0')
+print("Enter a starting number")
+res=input('>')
+if(res=='0' and not res.isdigit()):
+    print("Must be greater than 0 or positive integer")
 else:
-    collatz(int(num))
+    num=int(res)
+    print(num)
+    while num==1:
+        print('Input must be greater than 1')
+        sys.exit()
+    collatz(num)

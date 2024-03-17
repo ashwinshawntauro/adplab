@@ -1,12 +1,16 @@
-size=int(input('Enter the number of elements in the list: '))
+size=int(input('Enter the number of elements'))
 l=[]
 sum=0
 prod=1
 for i in range(size):
-    ele=int(input('Enter the list elements '))
+    ele=int(input('Enter an element'))
     l.append(ele)
-    if(ele%2==0):
-        sum=sum+ele
+
+for num in l:
+    if(num%2==0):
+        sum=sum+num
     else:
         prod=prod*ele
-print(sum,prod)
+
+print(sum)
+print(prod)

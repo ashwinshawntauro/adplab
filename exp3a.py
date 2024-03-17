@@ -1,15 +1,16 @@
 import random
 secretNum=random.randint(1,20)
-print('I am thinking of a number between 1 and 20')
-for guessTaken in range(7):
-    num=int(input('Take a guess'))
+print('I am guessing a num between 1 and 20')
+
+for guessTaken in range(1,7):
+    num=int(input('Guess a number'))
     if(num<secretNum):
         print('Your guess is too low')
     elif(num>secretNum):
-        print('Your guess is too high')
+        print("Your guess is too high")
     else:
         break
 if(num==secretNum):
-    print('Good Job! you guessed it in ',guessTaken,' guessed')
+    print('You guess the number in ',guessTaken)
 else:
-    print('The number I was thinking is ',secretNum)
+    print('Nope the number is',secretNum)

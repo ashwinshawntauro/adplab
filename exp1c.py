@@ -1,4 +1,4 @@
-num=int(input('Enter a number: '))
+num=int(input('Enter the starting number'))
 if(num>0):
     while(num>=0):
         print(num)
